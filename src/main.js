@@ -3,6 +3,20 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.css'
+import axios from 'axios'
+axios.defaults.baseURL = 'http://03.test.com';
+//axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+
+Vue.use(VueMaterial)
+Vue.material.registerTheme('default', {
+	primary: 'blue',
+	accent: 'pink',
+	warn: 'red',
+	background: 'grey'
+})
 
 Vue.config.productionTip = false
 
